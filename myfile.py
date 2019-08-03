@@ -1,1 +1,1 @@
-open 
+print("This is my file")
