@@ -34,8 +34,10 @@ def guess_game():
 			print("Your guess is high")
 		else:
 			print("Your guess is low")
-	print("You have exceeded the maximum limit")
+		if i == 5:
+			print("You have exceeded the maximum limit")
 
+	
 
 
 ###############################################################################

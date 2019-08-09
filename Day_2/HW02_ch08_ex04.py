@@ -15,7 +15,8 @@
 
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
+    """Every Character from the string is checked if it is in lowercase, if an uppercase letter is encountered as the
+    first letter of the string the program returns 'False' even if the consecutive letters are in lower case
     """
     for c in s:
         if c.islower():
@@ -25,7 +26,8 @@ def any_lowercase1(s):
 
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
+    """'c'.islower condition finds if the character c 'c' is in lower case.  And for every letter in the string, the 
+    condition 'c'.islower is evaluated and the result always evaluates to True except when the string is empty.
     """
     for c in s:
         if 'c'.islower():
@@ -35,7 +37,8 @@ def any_lowercase2(s):
 
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
+    """ The value of flag returned at the end of the function is True if the last letter is lower case and False if
+    the last letter is in upper case. Hence the program doesn't compute to find if at least a lower case letters exist"
     """
     for c in s:
         flag = c.islower()
@@ -52,7 +55,8 @@ def any_lowercase4(s):
 
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
+    """When a string begins with an Upper case, the program returns False without computing the subsequent charcters
+    and the hence the presence of lower case characters in a string is not recognised.
     """
     for c in s:
         if not c.islower():

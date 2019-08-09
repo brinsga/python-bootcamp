@@ -17,10 +17,20 @@
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
-    # +++your code here+++
-    return
+    """ The function accepts a string as arguments and adds 'ing' to the 
+    end if the string's length is greater than 3 and does not end with 'ing'.
+    If the string ends witn 'ing', then 'ing' is removed and 'ly' is added. 
+    And if the length is less than 3, the string is left unchanged
+    """
+    leng = len(s)
+    if leng < 3:
+        return s
+    elif s[(leng-3):leng] == 'ing':
+        return s[0:leng] + 'ly'
+    else: 
+        return s + 'ing'
 
-
+    
 # E. not_bad
 # Given a string, find the first appearance of the
 # substring 'not' and 'bad'. If the 'bad' follows
@@ -30,8 +40,13 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    # +++your code here+++
-    return
+    index_1 = s.find('not')
+    index_2 = s.find('bad')
+    if index_1 > index_2 :
+        return s
+    else:
+        replaced_str = s.replace(s[index_1:(index_2+3)], 'good' ,1)
+        return replaced_str
 
 
 # F. front_back
@@ -42,8 +57,22 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    # +++your code here+++
-    return
+    def dividing_string(n):
+        leng = len(n)
+        if leng % 2 == 0:
+            n_front = n[0:(leng//2)]
+            n_back = n[leng//2:leng]
+            return n_front, n_back
+        else: 
+            n_front = n[0:((leng//2)+1)]
+            n_back = n[((leng//2)+1):len(n)]
+            return n_front,n_back
+    a_front, a_back = dividing_string(a)
+    b_front, b_back = dividing_string(b)
+    return a_front + b_front + a_back + b_back
+
+
+
 
 
 # Simple provided test() function used in main() to print

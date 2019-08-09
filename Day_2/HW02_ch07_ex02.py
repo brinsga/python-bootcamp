@@ -25,6 +25,36 @@
 
 ###############################################################################
 # Imports
+import math
+
+def eval_loop():
+	"""
+	The eval_loop function iteratively asks for users to input expressions and evaluates
+	them until the user types done. The function then returns the last evaluated value and 
+	terminates
+	"""
+	user_input, eval_user_input = '', ''
+	while user_input != 'done':
+		while True:
+			try: 
+				user_input= input('Enter a expression to evaluate')
+				if user_input == 'done':
+			
+					break
+				eval_user_input = eval(user_input)
+				break
+			except NameError:
+				print("please enter a valid expression")
+			except SyntaxError:
+				print("Please enter an expression without special characters")
+			except TypeError:
+				print(" Please enter an expression without special characters")
+		
+		print(eval_user_input)
+	
+
+
+
 
 
 # Body
@@ -32,9 +62,7 @@
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # print(eval_loop())
-
+	eval_loop()
 
 if __name__ == '__main__':
     main()
