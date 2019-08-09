@@ -14,15 +14,21 @@
 ###############################################################################
 # Write your function below:
 # Body
+def right_justify(s):
+	""" The function right justify by adding leading spaces to the string s and 
+	displays the last letter of the string in the 70th column of the display.
+	"""
+	adjustment = 70 - len(s)
+	print(' '*adjustment + s)
 
 
 # Write your function above:
 ###############################################################################
 def main():
     """Call your functions within this function."""
-    print("Hello World!")
+
     right_justify("Python")
-    right_justify("YOUR_NAME")
+    right_justify("Brinda Gurusamy")
 
 
 if __name__ == "__main__":

@@ -9,14 +9,17 @@
 # (2) Now put the same statements into a script [this script] and run it.
 # enter statements below this line ########
 
+x = 5
+print(x + 1)
 print("Hello World!")  # example
 
 
 # enter statements above this line ########
 # What is the output?
-# [copy and past output here]
+# [Hello World!]
 #
 # (3) Modify the script above by transforming each expression into a print
 # statement and then run it again.
 # What is the output?
-# [copy and past output here]
+# 6
+#Hello World!

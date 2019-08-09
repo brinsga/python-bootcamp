@@ -22,6 +22,32 @@
 # Body
 
 
+def check_fermat(a,b,c,n):
+  	""" The function checks if the fermat theorem holds true for n > 2
+
+  	"""
+  	if n<=2:
+  		print ('Fermats theorem cannot be computed')
+  	elif a**n + b**n == c**n :
+  		print ('Holy Smokes, Fermat was wrong')
+  	else:
+  		print('No, that doesnt work')
+
+def check_fermat_ints():
+	def check_input(message):
+		while True:
+			try:
+				inp = int(input(message))
+			except Valueerror:
+				print('Please provide an integer')
+			return inp
+	a = check_input('Enter the value of a : ')
+	b = check_input('Enter the value of b : ')
+	c = check_input('Enter the value of c : ')
+	n = check_input('Enter the value of n as greater than 2 : ')
+	check_fermat(a,b,c,n)
+
+
 # Write your functions above:
 ###############################################################################
 def main():
@@ -31,9 +57,9 @@ def main():
     and two functions defined in the body:
     check_fermat_ints()
     check_fermat()
-    """
-    print("Hello World!")
 
+    """
+    check_fermat_ints()
 
 if __name__ == "__main__":
     main()
