@@ -14,14 +14,35 @@
 
 ###############################################################################
 # Imports
-
+import random
 
 # Body
+
+def guess_game():
+	number = random.randint(1,25)
+	for i in range(1,6):
+		while True:
+			try:
+				guess = int(input("Enter a number between 1 and 25"))
+				break
+			except ValueError:
+				print(" Please enter a number between 1 and 25")
+		if guess == number:
+			print(" Your guess is right")
+			break
+		elif guess > number:
+			print("Your guess is high")
+		else:
+			print("Your guess is low")
+		if i == 5:
+			print("You have exceeded the maximum limit")
+
+	
 
 
 ###############################################################################
 def main():
-    print("Hello World!")  # Remove this and replace with your function calls
+    guess_game()  # Remove this and replace with your function calls
 
 
 if __name__ == '__main__':

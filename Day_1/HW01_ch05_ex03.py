@@ -23,6 +23,36 @@
 # Write your functions below:
 # Body
 
+def is_triangle(x,y,z):
+    """ is_triangle function is given three lengths as arguments and is used to 
+    find if a triangle can be formed out of them
+    """
+    maxi = max(x,y,z)
+    if maxi <= (x+y+z-maxi):
+        return 'Yes'
+    else:
+        return 'No'
+
+
+def check_stick_lengths():
+    """
+    The function predicts whether a triangle can be formed based on three inputs 
+    from the user
+    """
+    x = []
+    i=0
+    while i<3:
+        while True:
+            try:
+                number = int(input("Enter a side of triangle"))
+                break
+            except ValueError:
+                print("Oops. Please enter a integer value")
+        x.append(number)
+        i = i+1
+    length_check = is_triangle(x[0],x[1],x[2])
+    return length_check
+
 
 # Write your functions above:
 ###############################################################################
@@ -37,8 +67,12 @@ def main():
     and a function call for
     check_stick_lengths()
     """
-    print("Hello World!")
-
-
+    print(is_triangle(1,2,3))
+    print(is_triangle(1,2,4))
+    print(is_triangle(1,5,3))
+    print(is_triangle(6,2,3))
+    outp = check_stick_lengths()
+    print(outp)
+    
 if __name__ == "__main__":
     main()

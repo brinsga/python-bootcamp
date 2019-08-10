@@ -39,6 +39,43 @@
 ###############################################################################
 # Write your functions below:
 # Body
+i = 0
+a = '+ '
+b = '- '
+c = '| '
+d = '  '
+
+
+def big_grid():
+	""" This function prints a big square grid 11*11 pattern
+	"""
+	for i in range(11):
+		for j in range(11):
+			if i%5 == 0 and j%5 == 0:
+				print(a, end="")
+			elif i%5 != 0 and j%5 == 0:
+				print (c, end="")
+			elif i%5 == 0 and j%5 != 0:
+				print (b, end="")
+			else:
+				print (d, end="")
+		print('')
+
+
+def small_grid():
+	""" This function builds a small 4*4 square grid pattern
+	"""
+	for i in range(4):
+		for j in range(4):
+			if i%3 == 0 and j%3 == 0:
+				print(a,end="")
+			elif i%3 != 0 and j%3 == 0:
+				print (c, end="")
+			elif i%3 == 0 and j%3 != 0:
+				print (b, end="")
+			else:
+				print (d, end="")
+		print('')
 
 
 # Write your functions above:
@@ -49,8 +86,10 @@ def main():
     two_by_two()
     four_by_four()
     """
-    print("Hello World!")
-
+    print('This is the BIG GRID')
+    big_grid()
+    print('This is the SMALL GRID')
+    small_grid()
 
 if __name__ == "__main__":
     main()

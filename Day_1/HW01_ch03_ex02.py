@@ -30,6 +30,31 @@
 # Write your functions below:
 # Body
 
+def do_twice(f, value):
+	""" The function takes a function f and a string value and executes the 
+	function passed as argument
+	"""
+	f(value)
+	f(value)
+
+def print_spam():
+	print('spam')
+
+def print_twice(val):
+	"""
+	The function prints the string argument val twice
+	"""
+	print(val)
+	print(val)
+
+def do_four(f,value):
+	""" The function is used to print the value passed as argumant for 
+	8 times
+	"""
+	do_twice(f,value)
+	do_twice(f,value)
+
+
 
 # Write your functions above:
 ###############################################################################
@@ -38,8 +63,7 @@ def main():
     When complete have one function call in this function:
     do_four(print_twice, [some_value])
     """
-    print("Hello World!")
-
+    do_four(print_twice,'spam')
 
 if __name__ == "__main__":
     main()
