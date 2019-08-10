@@ -11,15 +11,17 @@ def do_n(funct,n):
 	""" The do_n function executes the function given as arguments by
 	 n(another argument) times
 	 """
-	for i in range(0,n):
-		print(funct)
+	for i in range(n):
+		funct()
+
 
 # Write your functions above:
 def print_hello():
 	"""
 		Prints a string Hello World
 	"""
-	return('Hello World')
+	print('Hello World')
+
 
 
 ###############################################################################
@@ -28,7 +30,7 @@ def main():
 	When complete have one function call in this function:
 	do_n(print_hello, 10)
 	 """
-	do_n(print_hello(),10)
+	do_n(print_hello,10)
 
 
 if __name__ == "__main__":
